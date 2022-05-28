@@ -1,0 +1,112 @@
+.login {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)),
+    url(/src/assets/login_background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.form {
+  min-width: 25%;
+  width: 50rem;
+  background-color: rgba(128, 128, 128, 0.658);
+  padding: 3rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.form__heading {
+  color: seashell;
+  text-align: center;
+  font-size: clamp(2rem, 3vw + 1rem, 3.5rem);
+  letter-spacing: 3px;
+}
+
+.form__control {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+
+.form__controlLabel {
+  font-size: clamp(1.2rem, 1.5vw, 1.5rem);
+  color: rgb(199, 190, 190);
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.form__controlInput {
+  padding: 1rem;
+  margin-top: 1rem;
+  background-color: transparent;
+  border: none;
+  font-size: clamp(1rem, 1.5vw, 1.3rem);
+  position: relative;
+  border-bottom: 1px solid rgb(199, 190, 190);
+  color: seashell;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.form__controlInput::placeholder {
+  color: rgb(199, 190, 190);
+  font-weight: 800;
+}
+
+.form__controlInput:focus {
+  outline: none;
+  border-bottom: 2px solid #7ed56f;
+}
+
+.form__controlInput:invalid.form__controlInput:focus {
+  border-bottom: 2px solid #ff4f30;
+}
+
+.form__btn {
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+  border: none;
+  margin-top: 4rem;
+  font-size: clamp(1.3rem, 1vw, 1.7rem);
+  background-color: rgb(185, 175, 175);
+  cursor: pointer;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  align-self: center;
+  transition: all 0.2s;
+}
+
+.form__btn:focus,
+.form__btn:hover {
+  background-color: rgb(185, 66, 66);
+  letter-spacing: 2px;
+  transform: scale(1.1);
+  outline: none;
+}
+
+.form__error {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 1.3rem;
+  color: #ff4f30;
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+    transform: translateX(-2rem);
+  }
+
+  100% {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(0rem);
+  }
+}
